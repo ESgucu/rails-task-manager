@@ -1,0 +1,14 @@
+<%# Task.create(title: "Laundry", details: "Do not mix colors!")
+Task.create(title: "Studying", details: "A lot of flashcards to do", completed: true) %>
+
+<div class="container">
+<h1>My Tasks</h1>
+  <% @tasks.each do |task| %>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+   <%= link_to task.title, task_path(task.id) %>
+  </label>
+</div>
+  <% end %>
+</div>

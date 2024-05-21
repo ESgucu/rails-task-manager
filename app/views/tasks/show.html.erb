@@ -1,0 +1,6 @@
+<h1>Shows working</h1>
+<p><%=@task.title%></p>
+<%= link_to 'Edit the task', edit_path %>
+<%= link_to 'Delete the task', task_path(@task), data:  { turbo_method: :delete, turbo_confirm:'Are you sure
+?'} %>
+<%= link_to 'Back to the menu', root_path %>
